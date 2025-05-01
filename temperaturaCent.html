@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<!--
+ temperaturaCent.html
+
+ Pagina web con los datos de la fecha, la hora, la temperatura en
+ grados centigrados humedad e indice de calor en grados
+ centigrados y Fahrenheit.
+
+ La página se almacena en el sistema de archivos LittleFS en la
+ memoria flash del microcontrolador ESP32 para ahorrar espacio
+ Los elementos incrustados %FECHA%, %HUMEDAD%, %TEMP_CENT% y
+ %IND_CAL_CENT% seran reemplazados por los valores de la fecha
+ y hora, la humedad, la temperatura y el indice de calor en
+ grados centigrados. La substitución lo hace la funcion
+ processor()
+-->
+<html>
+
+<head>
+    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">
+    <title>Clima Web Server As&iacute;ncrono</title>
+    <link rel="stylesheet" type="text/css" href="estilos.css">
+</head>
+
+<body>
+    <h1>Servidor Web del Clima</h1>
+    <h2>Datos Climatol&oacute;gicos en Grados
+        Cent&iacute;grados</h2>
+    <form action="/c">
+        <table>
+            <tr>
+                <th class="derecha">Fecha: </th>
+                <td>%FECHA%</td>
+            </tr>
+        </table>
+        <br />
+        <table>
+            <tr>
+                <th class="derecha">Temperatura: </th>
+                <td>%TEMP_CENT% &deg;C</td>
+            </tr>
+            <tr>
+                <th class="derecha">Humedad: </th>
+                <td>%HUMEDAD% &percnt;</td>
+            </tr>
+            <tr>
+                <th class="derecha">&Iacute;ndice de calor:
+                </th>
+                <td>%IND_CAL_CENT% &deg;C</td>
+            </tr>
+        </table>
+        <br />
+        <p>
+            <input type="submit" name="boton" value="Recargar">
+        </p>
+    </form>
+    </body>
+   </html> 
+   

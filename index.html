@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<!--
+ index.html
+
+ Pagina web que muestra las URLs de las paginas que sirve la
+ aplicacion Web tempAsyncWebServer.
+
+ La página se almacena en el sistema de archivos LittleFS en la
+ memoria flash del microcontrolador ESP32 para ahorrar espacio
+ en la memoria RAM
+-->
+<html>
+
+<head>
+    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">
+    <title>Clima Web Server As&iacute;ncrono</title>
+    <link rel="stylesheet" type="text/css" href="estilos.css">
+</head>
+
+<body>
+    <h1>Servidor Web del Clima</h1>
+    <h2>URLs de las paginas que sirve la aplicacion Web</h2>
+    <table>
+        <tr>
+            <th>URL</th>
+            <th>P&aacute;gina</td>
+        </tr>
+        <tr>
+            <td>direccionIP_ServidorWeb/</td>
+            <td>Despliega las URLs/p&aacute;ginas</td>
+        </tr>
+        <tr>
+            <td>direccionIP_ServidorWeb/a</td>
+            <td>Despliega la temperatura en grados
+                cent&iacute;grados y Fahrenheit</td>
+        </tr>
+        <tr>
+            <td>direccionIP_ServidorWeb/c</td>
+            <td>Despliega la temperatura en grados
+                cent&iacute;grados</td>
+        </tr>
+        <tr>
+            <td>direccionIP_ServidorWeb/f</td>
+            <td>Despliega la temperatura en grados
+                Fahrenheit</td>
+        </tr>
+    </table>
+</body>
+
+</html>
